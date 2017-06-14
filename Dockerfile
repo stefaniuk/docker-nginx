@@ -1,4 +1,4 @@
-FROM codeworksio/ubuntu:16.04-20170613
+FROM codeworksio/ubuntu:16.04-20170614
 
 ARG APT_PROXY
 ARG APT_PROXY_SSL
@@ -42,10 +42,7 @@ RUN set -ex \
     && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* /var/cache/apt/* \
     && rm -f /etc/apt/apt.conf.d/00proxy
 
-COPY assets/etc/nginx/nginx.conf /etc/nginx/nginx.conf
-COPY assets/sbin/bootstrap.sh /sbin/bootstrap.sh
-
-ONBUILD COPY assets/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+ONBUILD COPY assets/ /
 
 VOLUME [ "/var/www" ]
 EXPOSE 8080 8443
