@@ -28,3 +28,9 @@ Start container using:
         --publish 8080:8080 \
         --publish 8443:8443 \
         codeworksio/nginx
+
+TODO
+----
+
+* Check GPG keys
+* Use `/var/cache/nginx` directory instead of `/usr/local/nginx`
