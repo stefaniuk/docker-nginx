@@ -62,7 +62,7 @@ COPY assets/ /
 
 VOLUME [ "/var/www" ]
 EXPOSE 8080 8443
-CMD [ "/sbin/init.sh", "--debug" ]
+CMD [ "/sbin/init.sh" ]
 
 ### METADATA ###################################################################
 
