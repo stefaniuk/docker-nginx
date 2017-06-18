@@ -62,7 +62,7 @@ COPY assets/ /
 
 VOLUME [ "/var/www" ]
 EXPOSE 8080 8443
-CMD [ "nginx", "-g", "daemon off;" ]
+CMD [ "/sbin/init.sh", "--debug" ]
 
 ### METADATA ###################################################################
 

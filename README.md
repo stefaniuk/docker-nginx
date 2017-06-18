@@ -17,17 +17,10 @@ Alternatively you can build the image yourself.
     docker build --tag codeworksio/nginx \
         github.com/codeworksio/docker-nginx
 
-Quickstart
-----------
+Configuration
+-------------
 
-Start container using:
-
-    docker run --detach --restart always \
-        --name nginx \
-        --hostname nginx \
-        --publish 8080:8080 \
-        --publish 8443:8443 \
-        codeworksio/nginx
+* Use `CMD [ "/sbin/init.sh", "--debug" ]` (or override it from the command line) in a child image to run NGINX in the debug mode
 
 TODO
 ----
