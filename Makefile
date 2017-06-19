@@ -30,6 +30,7 @@ start:
 	docker run --detach --interactive --tty \
 		--name $(NAME) \
 		--hostname $(NAME) \
+		--env "INIT_DEBUG=true" \
 		--publish 8080:8080 \
 		--publish 8443:8443 \
 		$(IMAGE)
