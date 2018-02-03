@@ -11,5 +11,5 @@ dependencies:
     - mkdir -p ~/docker; docker save codeworksio/nginx > ~/docker/image.tar
 test:
   override:
-    - docker run --interactive --tty --detach --name=nginx codeworksio/nginx; sleep 10
+    - docker run --detach --interactive --tty --name nginx codeworksio/nginx; sleep 10
     - docker ps | grep nginx
