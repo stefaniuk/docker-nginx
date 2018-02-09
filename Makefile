@@ -49,12 +49,9 @@ test:
 
 bash:
 	docker exec --interactive --tty \
+		--user root \
 		$(NAME) \
 		/bin/bash --login ||:
-
-clean:
-	docker stop $(NAME) > /dev/null 2>&1 ||:
-	docker rm $(NAME) > /dev/null 2>&1 ||:
 
 clean:
 	docker rmi $(IMAGE):$(shell cat VERSION) > /dev/null 2>&1 ||:
