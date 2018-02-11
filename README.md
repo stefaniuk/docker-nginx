@@ -17,6 +17,12 @@ Alternatively you can build the image yourself.
     docker build --tag codeworksio/nginx \
         github.com/codeworksio/docker-nginx
 
+Testing
+-------
+
+    make build start test
+    make stop
+
 Configuration
 -------------
 

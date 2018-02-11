@@ -1,4 +1,4 @@
-FROM codeworksio/ubuntu:18.04-20180203
+FROM codeworksio/ubuntu:18.04-20180210
 
 # SEE: https://github.com/nginxinc/docker-nginx/blob/master/mainline/alpine/Dockerfile
 
