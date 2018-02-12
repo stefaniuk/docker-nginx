@@ -42,10 +42,9 @@ log:
 	docker logs --follow $(NAME)
 
 test:
-	docker exec --interactive --tty \
-		--user ubuntu \
-		$(NAME) \
-		ps auxw
+	docker run --detach --interactive --tty --name nginx codeworksio/nginx
+	sleep 10
+	docker ps | grep "nginx"
 
 bash:
 	docker exec --interactive --tty \
@@ -60,6 +59,7 @@ clean:
 push:
 	docker push $(IMAGE):$(shell cat VERSION)
 	docker push $(IMAGE):latest
+	sleep 10
 	curl --request POST "https://hooks.microbadger.com/images/$(IMAGE)/hyhx4BgIQKqWR4IE4d7zUVJam0Q="
 
 .SILENT:
