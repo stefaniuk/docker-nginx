@@ -1,10 +1,10 @@
-FROM codeworksio/ubuntu:18.04-20180212
+FROM codeworksio/ubuntu:18.04-20190219
 
 # SEE: https://github.com/nginxinc/docker-nginx/blob/master/mainline/alpine/Dockerfile
 
 ARG APT_PROXY
 ARG APT_PROXY_SSL
-ENV NGINX_VERSION="1.13.8"
+ENV NGINX_VERSION="1.15.8"
 
 RUN set -ex; \
     \
